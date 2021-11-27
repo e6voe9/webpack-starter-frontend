@@ -1,6 +1,7 @@
-$body-color: slateblue;
-
-body {
-  color: $body-color;
-  font-family: sans-serif;
-}
+@import "vars";
+@import "fonts";
+@import "main";
+@import "ma1199";
+@import "ma1023";
+@import "ma767";
+@import "ma543";

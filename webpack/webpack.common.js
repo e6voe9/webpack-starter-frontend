@@ -17,13 +17,6 @@ module.exports = {
       name: false,
     },
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../public'), to: 'public' }] }),
-    new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, '../src/index.html'),
-    }),
-  ],
   resolve: {
     alias: {
       '~': Path.resolve(__dirname, '../src'),
@@ -37,14 +30,21 @@ module.exports = {
         type: 'javascript/auto',
       },
       {
-        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[ext]',
-          },
-        },
+        test: /\.(ico|jpg|jpeg|png|gif|webp|svg)$/,
+        type: 'asset/resource',
       },
     ],
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../public'), to: 'public' }] }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: Path.resolve(__dirname, '../src/index.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'test.html',
+      template: Path.resolve(__dirname, '../src/test.html'),
+    }),
+  ],
 };
