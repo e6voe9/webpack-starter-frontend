@@ -37,7 +37,8 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../public'), to: 'public' }] }),
+    new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../src/media'), to: 'media' }] }),
+    new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../src/fonts'), to: 'fonts' }] }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: Path.resolve(__dirname, '../src/index.html'),
