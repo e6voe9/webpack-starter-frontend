@@ -37,6 +37,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new ZipPlugin({
       // OPTIONAL: defaults to the Webpack output path (above)
       // can be relative (to Webpack output path) or absolute
@@ -87,16 +88,19 @@ module.exports = {
         forceZip64Format: false,
       },
     }),
-    new CleanWebpackPlugin(),
     new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../src/media'), to: 'media' }] }),
     new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../src/fonts'), to: 'fonts' }] }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: Path.resolve(__dirname, '../src/index.html'),
+      minify: false,
+      inject: 'body'
     }),
     new HtmlWebpackPlugin({
       filename: 'test.html',
       template: Path.resolve(__dirname, '../src/test.html'),
+      minify: false,
+      inject: 'body'
     }),
   ],
 };
