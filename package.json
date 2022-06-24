@@ -35,17 +35,17 @@
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.2.0",
-    "node-sass": "^6.0.1",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
+    "sass": "^1.53.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-webpack-plugin": "^3.0.1",
-    "webpack": "^5.50.0",
+    "webpack": "^5",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2",
+    "webpack-dev-server": "^4.9.2",
     "webpack-merge": "^5.8.0",
     "zip-webpack-plugin": "^4.0.1"
   },
@@ -53,6 +53,7 @@
     "@babel/polyfill": "^7.12.1",
     "core-js": "^3.16.1",
     "d3": "^7.0.0",
+    "http-proxy-middleware": "^2.0.6",
     "normalize.css": "^8.0.1"
   }
 }
