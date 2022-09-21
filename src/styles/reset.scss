@@ -1,14 +1,14 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	-webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-	font-family: "";
-	font-weight: 400;
-	color: #000;
+  font-family: "";
+  font-weight: 400;
+  color: #000;
 }
 
 button,
@@ -18,22 +18,22 @@ ul,
 li,
 ol,
 textarea {
-	border: none;
-	color: inherit;
-	background-color: transparent;
-	list-style-type: none;
-	text-decoration: none;
-	outline: none;
-	font-family: inherit;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
+  font-family: inherit;
 }
 
 button {
-	display: inline-block;
-	cursor: pointer;
+  display: inline-block;
+  cursor: pointer;
 }
 
 img {
-	display: inline-block;
-	width: 100%;
-	height: auto;
+  display: inline-block;
+  width: 100%;
+  height: auto;
 }
