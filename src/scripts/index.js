@@ -29,4 +29,5 @@ if (process.env.NODE_ENV === 'development') {
 // 	observer.observe(img);
 // })
 
+
 console.log('loaded successfully');
